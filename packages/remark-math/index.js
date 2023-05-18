@@ -5,7 +5,7 @@
  * @typedef {import('mdast-util-math')} DoNotTouchAsThisImportIncludesMathInTree
  */
 
-import {math} from 'micromark-extension-math'
+import {math} from 'micromark-extension-math-2'
 import {mathFromMarkdown, mathToMarkdown} from 'mdast-util-math'
 
 /**

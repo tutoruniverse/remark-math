@@ -1,6 +1,6 @@
 {
-  "name": "remark-math",
-  "version": "5.1.1",
+  "name": "remark-math-2",
+  "version": "5.1.2",
   "description": "remark plugin to parse and stringify math",
   "license": "MIT",
   "keywords": [
@@ -37,7 +37,7 @@
   "dependencies": {
     "@types/mdast": "^3.0.0",
     "mdast-util-math": "^2.0.0",
-    "micromark-extension-math": "^2.0.0",
+    "micromark-extension-math-2": "^2.0.0",
     "unified": "^10.0.0"
   },
   "scripts": {
