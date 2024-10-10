@@ -64,6 +64,8 @@
  *   Configuration for the output (when CHTML).
  * @property {OutputSvgOptions} [svg]
  *   Configuration for the output (when SVG).
+ * @property {any} [customConvertNode]
+
  *
  * @typedef Renderer
  * @property {(node: Element, options: {display: boolean}) => void} render

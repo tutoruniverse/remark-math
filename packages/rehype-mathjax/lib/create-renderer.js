@@ -39,13 +39,15 @@ export function createRenderer(options, output) {
   const input = new TeX(Object.assign({packages: AllPackages}, options.tex))
   /** @type {MathDocument} */
   const doc = mathjax.document('', {InputJax: input, OutputJax: output})
+  const { customConvertNode } = options;
 
   return {
     render(node, options) {
+      const convertNode = customConvertNode || doc.convert;
       const domNode = fromDom(
-        // @ts-expect-error: assume mathml nodes can be handled by
+        // assume mathml nodes can be handled by
         // `hast-util-from-dom`.
-        doc.convert(toText(node, {whitespace: 'pre'}), options)
+        convertNode(toText(node, {whitespace: 'pre'}), options)
       )
       // @ts-expect-error: `fromDom` returns an element for a given element.
       node.children = [domNode]
